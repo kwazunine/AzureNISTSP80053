@@ -75,9 +75,9 @@ The environment used in this write-up was deployed in Microsoft Azure with key v
 ### Configuration
 
 1. Add an Inboud Rule to the Linux and Windows VM NSG, which allows any type of traffic to any port.
-<img src="https://i.imgur.com/ouSsDqk.png" alt="NSG Any Inbound Rule" width="250" height="500">
+<img src="https://i.imgur.com/ouSsDqk.png" alt="NSG Any Inbound Rule" width="500" height="750">
 2. Turn off Windows Firewall on the Windows VM.
-<img src="https://i.imgur.com/czWdLZ2.png" alt="Turn off Windows Firewall" width="400" height="300">
+<img src="https://i.imgur.com/czWdLZ2.png" alt="Turn off Windows Firewall" width="500" height="500">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -89,16 +89,16 @@ The environment used in this write-up was deployed in Microsoft Azure with key v
 To implement NIST SP 800-53 compliance in Azure, Microsoft Defender for Cloud should already be enabled.
 
 
-<img src="https://i.imgur.com/rzvZpV5.png" alt="NIST SP 800-53 Off" width="500" height="150">
-<img src="https://i.imgur.com/rbXESji.png" alt="NIST SP 800-53 On" width="500" height="150">
+<img src="https://i.imgur.com/rzvZpV5.png" alt="NIST SP 800-53 Off" width="750" height="250">
+<img src="https://i.imgur.com/rbXESji.png" alt="NIST SP 800-53 On" width="750" height="250">
 
 Once activated, Microsoft Defender for Cloud allows NIST SP 800-53 compliance to be applied to Azure resources and subscriptions, providing a dashboard with detailed compliance data and tailored recommendations. This dashboard offers a centralized view of compliance status, with actionable insights to help align resources with NIST standards.
 
-<img src="https://i.imgur.com/Syi4iTu.png" alt="NIST SP 800-53 Dasboard" width="500" height="400">
+<img src="https://i.imgur.com/Syi4iTu.png" alt="NIST SP 800-53 Dasboard" width="750" height="750">
 
 With NIST SP 800-53 compliance activated in Azure, controls such as the SC-7 Boundary Protection can be viewed in detail. As shown below, the current environment is not complaint with the recommended controls.
 
-<img src="https://i.imgur.com/AafuPQZ.png" alt="SC-7 Boundary Protection Recommendations" width="1000" height="250">
+<img src="https://i.imgur.com/AafuPQZ.png" alt="SC-7 Boundary Protection Recommendations" width="1000" height="200">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -110,10 +110,10 @@ The following actions are required to achieve NIST SP 800-53 SC-7 Boundary Prote
 
 *Subnets should be associated with a network security group:*
 - [x] Create private endpoint for the Azure Key Vault.
-<img src="https://i.imgur.com/3nsR0x2.png" alt="AKV Private Endpoint" width="300" height="500">
+<img src="https://i.imgur.com/3nsR0x2.png" alt="AKV Private Endpoint" width="500" height="500">
 
 - [x] Create private endpoint for the Azure Storage Account.
-<img src="https://i.imgur.com/jjC13Xm.png" alt="SA Private Endpoint" width="300" height="500">
+<img src="https://i.imgur.com/jjC13Xm.png" alt="SA Private Endpoint" width="500" height="500">
 
 *Management ports should be closed on your virtual machines:*
 - [x] Turn on the Windows Firewall on the Windows VM.
@@ -124,7 +124,7 @@ The following actions are required to achieve NIST SP 800-53 SC-7 Boundary Prote
 
 *All network ports should be restricted on network security groups associated to your virtual machine:*
 - [x] Add Inbound Rule to Linux & Windows VM NSG which allows traffic from admin IP address only.
-<img src="https://i.imgur.com/qtP5a6u.png" alt="NSG Admin Only Inbound Rule" width="300" height="500">
+<img src="https://i.imgur.com/qtP5a6u.png" alt="NSG Admin Only Inbound Rule" width="500" height="500">
 
 *Azure Kev Vaults should use private link:*
 - [x] Disable Azure Key Vault public access.
