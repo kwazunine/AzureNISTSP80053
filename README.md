@@ -16,13 +16,11 @@
 <br />
 <div align="center">
   <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf">
-    <img src="https://i.imgur.com/l0W1Cj5.png" alt="Logo" width="480" height="360">
+    <img src="https://i.imgur.com/ULHBnk7.jpeg" alt="Logo" width="300" height="150">
   </a>
 
-  <h3 align="center">NIST SP 800-53 [SC-7 Boundary Protection] Application</h3>
-
   <p align="center">
-    This write up demonstrates how to apply NIST SP SP 800-53 [SC-7 Boundary Protection] to resources within Microsoft Azure.
+    This write up demonstrates how to apply NIST SP 800-53 [SC-7 Boundary Protection] to resources within Microsoft Azure.
     <br />
   </p>
 </div>
@@ -34,13 +32,13 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-nist-sp-800-53-sc-7-boundary-protection">About NIST SP 800-53 SC-7 Boundary Protection</a>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#environment">Environment</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#configuration">Configuration</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -54,89 +52,85 @@
 
 
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
+<!-- About NIST SP 800-53 SC-7 Boundary Protection -->
+## About NIST SP 800-53 SC-7 Boundary Protection
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<img src="https://i.imgur.com/exk5sXu.png" alt="Logo" width="200" height="200">
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
+NIST SP 800-53, provides a catalog of guidelines to help federal agencies and organizations implement security and privacy controls. It includes controls across areas like access control, incident response, and risk assessment, supporting compliance with the Federal Information Security Modernization Act (FISMA). Control SC-7, Boundary Protection, requires organizations to monitor and control communications at system boundaries to prevent unauthorized access. It involves using firewalls, proxies, and gateways to secure network communications and protect sensitive data.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- GETTING STARTED -->
-## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+<!-- ENVIRONMENT -->
+## Environment
+
+The environment is deployed in Microsoft Azure with key vaults, network security groups, and virtual machines (Windows and Linux). These resources are configured to be accessible from the public internet, placing them at a high risk of unauthorized access.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+1. Microsoft Azure Account
+2. Azure Key Vault
+3. Azure Storage Account
+4. Linux Virtual Machine
+5. Windows Virtual Machine
+6. Network Security Groups
+7. Microsoft Defender for Cloud
 
-### Installation
+### Configuration
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-5. Change git remote url to avoid accidental pushes to base project
-   ```sh
-   git remote set-url origin github_username/repo_name
-   git remote -v # confirm the changes
-   ```
+1. Add Inboud Rule to the Virtual Machine Network Security Gorups which opens enables all traffic.
+<img src="https://i.imgur.com/ouSsDqk.png" alt="Logo" width="250" height="500">
+2. Turn off Windows Firewall on Windows VM.
+<img src="https://i.imgur.com/czWdLZ2.png" alt="Logo" width="400" height="300">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
+<!-- IMPLEMENTATION -->
+## Implementation
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+To set up NIST SP 800-53 compliance in Azure, begin by enabling Microsoft Defender for Cloud. Once activated, Microsoft Defender for Cloud allows NIST SP 800-53 compliance to be applied to Azure resources and subscriptions, providing a dashboard with detailed compliance data and tailored recommendations. This dashboard offers a centralized view of compliance status, with actionable insights to help align resources with NIST standards.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<img src="https://i.imgur.com/rzvZpV5.png" alt="Logo" width="500" height="150">
+<img src="https://i.imgur.com/rbXESji.png" alt="Logo" width="500" height="150">
+<img src="https://i.imgur.com/Syi4iTu.png" alt="Logo" width="500" height="400">
+
+With NIST SP 800-53 activated, reviewing the SC-7 Boundary Protection recommendations is next. As shown below, the current environment is not complaint with the recommended controls.
+
+<img src="https://i.imgur.com/AafuPQZ.png" alt="Logo" width="600" height="200">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-<!-- ROADMAP -->
-## Roadmap
+<!-- REMEDIATION-->
+## Remediation
+The following actions are required to achieve NIST SP 800-53 SC-7 Boundary Protection compliance in the current environment.
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+Subnets should be associated with a network security group:
+- [x] Create private endpoint for the Azure Key Vault.
+<img src="https://i.imgur.com/3nsR0x2.png" alt="Logo" width="400" height="500">
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+- [x] Create private endpoint for the Azure Storage Account.
+<img src="https://i.imgur.com/jjC13Xm.png" alt="Logo" width="300" height="500">
+
+Management ports should be closed on your virtual machines:
+- [x] Turn on the Windows Firewall on the Windows VM.
+- [x] Remove Inbound Rule from the Linux VM NSG which allows inbound traffic on any port.
+
+Management ports of virtual machines should be protected with just-in-time network access control:
+- [x] Enable Just-in-time VM access via Microsoft Defender for Cloud Workload protections.
+
+All network ports should be restricted on network security groups associated to your virtual machine:
+- [x] Add Inbound Rule to Linux & Windows VM NSG which allows traffic from admin IP address only.
+<img src="https://i.imgur.com/qtP5a6u.png" alt="Logo" width="400" height="500">
+
+Azure Kev Vaults should use private link:
+- [x] Disable Azure Key Vault public access.
+<img src="https://i.imgur.com/TDUTUUR.png" alt="Logo" width="600" height="600">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -201,37 +195,3 @@ Use this space to list resources you find helpful and would like to give credit 
 * [React Icons](https://react-icons.github.io/react-icons/search)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
