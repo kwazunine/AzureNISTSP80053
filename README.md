@@ -1,15 +1,5 @@
 # NIST SP 800-53 (SC-7 Boundary Protection)
 
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-<a id="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
 
 
 <!-- NIST LOGO -->
@@ -75,9 +65,9 @@ The environment used in this write-up was deployed in Microsoft Azure with key v
 ### Configuration
 
 1. Add an Inboud Rule to the Linux and Windows VM NSG, which allows any type of traffic to any port.
-<img src="https://i.imgur.com/ouSsDqk.png" alt="NSG Any Inbound Rule" width="500" height="750">
+<img src="https://i.imgur.com/ouSsDqk.png" alt="NSG Any Inbound Rule" width="300" height="400">
 2. Turn off Windows Firewall on the Windows VM.
-<img src="https://i.imgur.com/czWdLZ2.png" alt="Turn off Windows Firewall" width="500" height="500">
+<img src="https://i.imgur.com/czWdLZ2.png" alt="Turn off Windows Firewall" width="500" height="300">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -86,13 +76,12 @@ The environment used in this write-up was deployed in Microsoft Azure with key v
 <!-- IMPLEMENTATION -->
 ## Implementation
 
-To implement NIST SP 800-53 compliance in Azure, Microsoft Defender for Cloud should already be enabled.
+To implement NIST SP 800-53 compliance in Azure, Microsoft Defender for Cloud should already be enabled.Once activated, Microsoft Defender for Cloud allows NIST SP 800-53 compliance to be applied to Azure resources and subscriptions, providing a dashboard with detailed compliance data and tailored recommendations.
 
+<img src="https://i.imgur.com/rzvZpV5.png" alt="NIST SP 800-53 Off" width="750" height="150">
+<img src="https://i.imgur.com/rbXESji.png" alt="NIST SP 800-53 On" width="750" height="150">
 
-<img src="https://i.imgur.com/rzvZpV5.png" alt="NIST SP 800-53 Off" width="750" height="250">
-<img src="https://i.imgur.com/rbXESji.png" alt="NIST SP 800-53 On" width="750" height="250">
-
-Once activated, Microsoft Defender for Cloud allows NIST SP 800-53 compliance to be applied to Azure resources and subscriptions, providing a dashboard with detailed compliance data and tailored recommendations. This dashboard offers a centralized view of compliance status, with actionable insights to help align resources with NIST standards.
+This dashboard offers a centralized view of compliance status, with actionable insights to help align resources with NIST standards.
 
 <img src="https://i.imgur.com/Syi4iTu.png" alt="NIST SP 800-53 Dasboard" width="750" height="750">
 
