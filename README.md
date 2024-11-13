@@ -51,14 +51,9 @@
 
 <!-- About NIST SP 800-53 SC-7 Boundary Protection -->
 ## About NIST SP 800-53 SC-7 Boundary Protection
-<div align="center">
-<img src="https://i.imgur.com/exk5sXu.png" alt="Firewall Icon" width="125" height="125">
-</div>
-
 NIST SP 800-53, provides a catalog of guidelines to help federal agencies and organizations implement security and privacy controls. It includes controls across areas like access control, incident response, and risk assessment, supporting compliance with the Federal Information Security Modernization Act (FISMA). Control SC-7, Boundary Protection, requires organizations to monitor and control communications at system boundaries to prevent unauthorized access. It involves using firewalls, proxies, and gateways to secure network communications and protect sensitive data.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 
@@ -93,6 +88,7 @@ The environment used in this write-up was deployed in Microsoft Azure with key v
 
 To implement NIST SP 800-53 compliance in Azure, Microsoft Defender for Cloud should already be enabled.
 
+
 <img src="https://i.imgur.com/rzvZpV5.png" alt="NIST SP 800-53 Off" width="500" height="150">
 <img src="https://i.imgur.com/rbXESji.png" alt="NIST SP 800-53 On" width="500" height="150">
 
@@ -112,25 +108,25 @@ With NIST SP 800-53 compliance activated in Azure, controls such as the SC-7 Bou
 ## Remediation
 The following actions are required to achieve NIST SP 800-53 SC-7 Boundary Protection compliance with the current Azure resources and environment.
 
-Subnets should be associated with a network security group:
+*Subnets should be associated with a network security group:*
 - [x] Create private endpoint for the Azure Key Vault.
 <img src="https://i.imgur.com/3nsR0x2.png" alt="AKV Private Endpoint" width="300" height="500">
 
 - [x] Create private endpoint for the Azure Storage Account.
 <img src="https://i.imgur.com/jjC13Xm.png" alt="SA Private Endpoint" width="300" height="500">
 
-Management ports should be closed on your virtual machines:
+*Management ports should be closed on your virtual machines:*
 - [x] Turn on the Windows Firewall on the Windows VM.
 - [x] Remove the Inbound Rule from the Linux & Windows VM NSG which allows inbound traffic on any port.
 
-Management ports of virtual machines should be protected with just-in-time network access control:
+*Management ports of virtual machines should be protected with just-in-time network access control:*
 - [x] Enable Just-in-time VM access via Microsoft Defender for Cloud Workload protections.
 
-All network ports should be restricted on network security groups associated to your virtual machine:
+*All network ports should be restricted on network security groups associated to your virtual machine:*
 - [x] Add Inbound Rule to Linux & Windows VM NSG which allows traffic from admin IP address only.
 <img src="https://i.imgur.com/qtP5a6u.png" alt="NSG Admin Only Inbound Rule" width="300" height="500">
 
-Azure Kev Vaults should use private link:
+*Azure Kev Vaults should use private link:*
 - [x] Disable Azure Key Vault public access.
 <img src="https://i.imgur.com/TDUTUUR.png" alt="Disable Azure Key Vault Public Access" width="500" height="500">
 
@@ -140,7 +136,6 @@ Azure Kev Vaults should use private link:
 
 <!-- CONCLUSION -->
 ## Conclusion
-
-
+In conclusion, the adjustments made to the Azure resouces significantly enhanced the security posture of the environment by aligning them with NIST SP 800-53 SC-7 Boundary Protection controls. By enforcing measures such as the restriction of inbound and management ports, and the use of private endpoints, high network exposure risks were mitigated. These adjustments collectively ensure a more robust defense against unauthorized access, reducing potential attack vectors and reinforcing boundary protection in the Azure environment.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
