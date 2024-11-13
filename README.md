@@ -1,4 +1,4 @@
-# NIST SP 800-53 [SC-7 Boundary Protection]
+# NIST SP 800-53 (SC-7 Boundary Protection)
 
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a id="readme-top"></a>
