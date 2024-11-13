@@ -16,7 +16,7 @@
 <br />
 <div align="center">
   <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf">
-    <img src="https://i.imgur.com/ULHBnk7.jpeg" alt="NIST Logo" width="300" height="150">
+    <img src="https://i.imgur.com/XRn0OuK.png" alt="NIST Logo" width="250" height="250">
   </a>
 
   <p align="center">
@@ -51,12 +51,14 @@
 
 <!-- About NIST SP 800-53 SC-7 Boundary Protection -->
 ## About NIST SP 800-53 SC-7 Boundary Protection
-
-<img src="https://i.imgur.com/exk5sXu.png" alt="Firewall Icon" width="200" height="200">
+<div align="center">
+<img src="https://i.imgur.com/exk5sXu.png" alt="Firewall Icon" width="125" height="125">
+</div>
 
 NIST SP 800-53, provides a catalog of guidelines to help federal agencies and organizations implement security and privacy controls. It includes controls across areas like access control, incident response, and risk assessment, supporting compliance with the Federal Information Security Modernization Act (FISMA). Control SC-7, Boundary Protection, requires organizations to monitor and control communications at system boundaries to prevent unauthorized access. It involves using firewalls, proxies, and gateways to secure network communications and protect sensitive data.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 
