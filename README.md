@@ -41,12 +41,9 @@
         <li><a href="#configuration">Configuration</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#implementation">Implementation</a></li>
+    <li><a href="#remediation">Remediation</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
   </ol>
 </details>
 
@@ -112,32 +109,32 @@ The following actions are required to achieve NIST SP 800-53 SC-7 Boundary Prote
 
 Subnets should be associated with a network security group:
 - [x] Create private endpoint for the Azure Key Vault.
-<img src="https://i.imgur.com/3nsR0x2.png" alt="Logo" width="400" height="500">
+<img src="https://i.imgur.com/3nsR0x2.png" alt="Logo" width="300" height="500">
 
 - [x] Create private endpoint for the Azure Storage Account.
 <img src="https://i.imgur.com/jjC13Xm.png" alt="Logo" width="300" height="500">
 
 Management ports should be closed on your virtual machines:
 - [x] Turn on the Windows Firewall on the Windows VM.
-- [x] Remove Inbound Rule from the Linux VM NSG which allows inbound traffic on any port.
+- [x] Remove the Inbound Rule from the Linux & Windows VM NSG which allows inbound traffic on any port.
 
 Management ports of virtual machines should be protected with just-in-time network access control:
 - [x] Enable Just-in-time VM access via Microsoft Defender for Cloud Workload protections.
 
 All network ports should be restricted on network security groups associated to your virtual machine:
 - [x] Add Inbound Rule to Linux & Windows VM NSG which allows traffic from admin IP address only.
-<img src="https://i.imgur.com/qtP5a6u.png" alt="Logo" width="400" height="500">
+<img src="https://i.imgur.com/qtP5a6u.png" alt="Logo" width="300" height="500">
 
 Azure Kev Vaults should use private link:
 - [x] Disable Azure Key Vault public access.
-<img src="https://i.imgur.com/TDUTUUR.png" alt="Logo" width="600" height="600">
+<img src="https://i.imgur.com/TDUTUUR.png" alt="Logo" width="500" height="500">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-<!-- CONTRIBUTING -->
-## Contributing
+<!-- CONCLUSION -->
+## Conclusion
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -149,49 +146,3 @@ Don't forget to give the project a star! Thanks again!
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-### Top contributors:
-
-<a href="https://github.com/othneildrew/Best-README-Template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=othneildrew/Best-README-Template" alt="contrib.rocks image" />
-</a>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
