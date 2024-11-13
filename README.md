@@ -136,6 +136,6 @@ The following actions are required to achieve NIST SP 800-53 SC-7 Boundary Prote
 
 <!-- CONCLUSION -->
 ## Conclusion
-In conclusion, the adjustments made to the Azure resouces significantly enhanced the security posture of the environment by aligning them with NIST SP 800-53 SC-7 Boundary Protection controls. By enforcing measures such as the restriction of inbound and management ports, and the use of private endpoints, high network exposure risks were mitigated. These adjustments collectively ensure a more robust defense against unauthorized access, reducing potential attack vectors and reinforcing boundary protection in the Azure environment.
+In summary, the adjustments to the Azure resources greatly strengthened the security posture of the environment by aligning with NIST SP 800-53 SC-7 Boundary Protection controls. Measures like restricting inbound and management ports, along with implementing private endpoints, effectively mitigated high network exposure risks. Together, these adjustments provide a stronger defense against unauthorized access, reduce potential attack vectors, and reinforce boundary protection within the Azure environment, underscoring the effectiveness of NIST SP 800-53 in safeguarding organizations against cyber threats.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
