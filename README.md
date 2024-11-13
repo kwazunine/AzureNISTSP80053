@@ -83,11 +83,11 @@ To implement NIST SP 800-53 compliance in Azure, Microsoft Defender for Cloud sh
 
 This dashboard offers a centralized view of compliance status, with actionable insights to help align resources with NIST standards.
 
-<img src="https://i.imgur.com/Syi4iTu.png" alt="NIST SP 800-53 Dasboard" width="750" height="750">
+<img src="https://i.imgur.com/Syi4iTu.png" alt="NIST SP 800-53 Dasboard" width="600" height="600">
 
 With NIST SP 800-53 compliance activated in Azure, controls such as the SC-7 Boundary Protection can be viewed in detail. As shown below, the current environment is not complaint with the recommended controls.
 
-<img src="https://i.imgur.com/AafuPQZ.png" alt="SC-7 Boundary Protection Recommendations" width="1000" height="200">
+<img src="https://i.imgur.com/AafuPQZ.png" alt="SC-7 Boundary Protection Recommendations" width="800" height="150">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
