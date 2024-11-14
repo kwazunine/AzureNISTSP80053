@@ -76,7 +76,7 @@ The environment used in this write-up was deployed in Microsoft Azure with key v
 <!-- IMPLEMENTATION -->
 ## Implementation
 
-To implement NIST SP 800-53 compliance in Azure, Microsoft Defender for Cloud should already be enabled.Once activated, Microsoft Defender for Cloud allows NIST SP 800-53 compliance to be applied to Azure resources and subscriptions, providing a dashboard with detailed compliance data and tailored recommendations.
+To implement NIST SP 800-53 compliance in Azure, Microsoft Defender for Cloud should already be enabled. Once activated, Microsoft Defender for Cloud allows NIST SP 800-53 compliance to be applied to Azure resources and subscriptions, providing a dashboard with detailed compliance data and tailored recommendations.
 
 <img src="https://i.imgur.com/rzvZpV5.png" alt="NIST SP 800-53 Off" width="750" height="150">
 <img src="https://i.imgur.com/rbXESji.png" alt="NIST SP 800-53 On" width="750" height="150">
