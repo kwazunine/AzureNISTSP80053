@@ -64,7 +64,7 @@ The environment used in this write-up was deployed in Microsoft Azure with key v
 
 ### Configuration
 
-1. Add an Inboud Rule to the Linux and Windows VM NSG, which allows any type of traffic to any port.
+1. Add an Inbound Rule to the Linux and Windows VM NSG, which allows any type of traffic to any port.
 <img src="https://i.imgur.com/ouSsDqk.png" alt="NSG Any Inbound Rule" width="250" height="400">
 2. Turn off Windows Firewall on the Windows VM.
 <img src="https://i.imgur.com/czWdLZ2.png" alt="Turn off Windows Firewall" width="400" height="300">
@@ -83,7 +83,7 @@ To implement NIST SP 800-53 compliance in Azure, Microsoft Defender for Cloud sh
 
 This dashboard offers a centralized view of compliance status, with actionable insights to help align resources with NIST standards.
 
-<img src="https://i.imgur.com/Syi4iTu.png" alt="NIST SP 800-53 Dasboard" width="400" height="300">
+<img src="https://i.imgur.com/Syi4iTu.png" alt="NIST SP 800-53 Dashboard" width="400" height="300">
 
 With NIST SP 800-53 compliance activated in Azure, controls such as the SC-7 Boundary Protection can be viewed in detail. As shown below, the current environment is not complaint with the recommended controls.
 
