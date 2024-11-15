@@ -50,7 +50,7 @@ NIST SP 800-53, provides a catalog of guidelines to help federal agencies and or
 <!-- ENVIRONMENT -->
 ## Environment
 
-The environment used in this write-up was deployed in Microsoft Azure with key vaults, network security groups, storage accounts, and virtual machines (Windows and Linux). These resources were then configured to be accessible accessible to the public internet, placing them at a high risk of unauthorized access.
+The environment used in this write-up was deployed in Microsoft Azure with key vaults, network security groups, storage accounts, and virtual machines (Windows and Linux). These resources were then configured to be accessible to the public internet, placing them at a high risk of unauthorized access.
 
 ### Prerequisites
 
